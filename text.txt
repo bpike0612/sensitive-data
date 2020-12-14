@@ -1,0 +1,5 @@
+//https://medium.com/pipedrive-engineering/data-logging-with-golang-how-to-store-customer-details-securely-14d49f2cf992
+
+//https://gist.github.com/vadzappa/89b11c2a05c312c93c5efe505b75fc32
+
+//https://blog.golang.org/protobuf-apiv2

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+
+package protocol;
+
+option go_package = ".;protocol";
+
+message FieldOptions {
+  string logField = 1;
+}
+
+extend google.protobuf.FieldOptions {
+  FieldOptions options = 50000;
+}
