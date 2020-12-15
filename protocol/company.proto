@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "options.proto";
+
+package protocol;
+
+option go_package = ".;protocol";
+
+message Title {
+  int64 id = 1 [(protocol.options).logField = "profession_id"];
+  string name = 2;
+}
+
+message User {
+  int64 id = 1 [(protocol.options).logField = "user_id"];
+  string name = 2;
+  string email = 3;
+  Title title = 4;
+}
+
+message Company {
+  int64 id = 1 [(protocol.options).logField = "company_id"];
+  User owner = 2 [(protocol.options).logField = "owner"];
+  User coOwner = 3 [(protocol.options).logField = "co_owner"];
+  int64 size = 4 [(protocol.options).logField = "size"];
+}
